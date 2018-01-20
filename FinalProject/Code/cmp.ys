@@ -1,0 +1,8 @@
+read_verilog ./module/alu_8bit.v
+hierarchy -check -top alu_8bit
+proc; opt; memory; fsm; opt
+techmap; opt
+dfflibmap -liberty lib/begadang33.lib.js
+abc -liberty lib/begadang33.lib.js
+clean
+write_verilog -norename -noattr cmp.v

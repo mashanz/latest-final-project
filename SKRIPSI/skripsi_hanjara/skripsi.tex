@@ -1,0 +1,68 @@
+\documentclass[12pt, a4paper, onecolumn, oneside, final]{report}
+
+\usepackage{telkomskripsi}
+
+\input{laporan_setting}
+
+\include{hype.indonesia}
+
+\input{istilah}
+
+\begin{document}        
+	% Sampul Laporan
+	\include{sampul}
+
+	% Gunakan penomeran romawi
+	\pagenumbering{roman}
+
+	% load halaman judul dalam
+	\addChapter{HALAMAN JUDUL}
+	\include{judul_dalam}
+
+	% setelah bagian ini, halaman dihitung sebagai halaman ke 2
+	\setcounter{page}{2}
+	
+	\addChapter{LEMBAR PENGESAHAN}
+	%\include{pengesahan_sidang}
+	
+	% load halaman orisinalitas 
+	\addChapter{LEMBAR PERNYATAAN ORISINALITAS}
+	%\include{orisinal}
+	
+	\addChapter{ Kata Pengantar }
+	\i nclude{pengantar}
+	
+	\addChapter{ABSTRAK}
+	\include{abstrak}
+	
+	\addChapter{ABSTRACT}
+	\include{abstract}
+	
+	% Daftar isi, gambar, dan tabel
+	\tableofcontents
+	\clearpage
+	\listoffigures
+	\clearpage
+	\listoftables
+	\clearpage
+	
+	% Gunakan penomeran Arab (1, 2, 3, ...) setelah bagian ini.
+	\pagenumbering{arabic}
+	
+	% BAB BAB Halaman
+	\include{bab1}
+	\include{bab2}
+	\include{bab3}
+	\include{bab4}
+	\include{kesimpulan}
+	
+	% Daftar Pustaka
+	\include{pustaka}
+	
+	% Lampiran 
+	\begin{appendix}
+		\include{markLampiran}
+		\setcounter{page}{2}
+		\include{lampiran}
+	\end{appendix}
+\end{document}

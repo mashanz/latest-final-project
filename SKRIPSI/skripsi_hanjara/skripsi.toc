@@ -1,0 +1,50 @@
+\contentsline {chapter}{HALAMAN JUDUL}{i}{section*.2}
+\contentsline {chapter}{LEMBAR PENGESAHAN}{ii}{section*.4}
+\contentsline {chapter}{LEMBAR PERNYATAAN ORISINALITAS}{ii}{section*.5}
+\contentsline {chapter}{ Kata Pengantar }{ii}{section*.6}
+\contentsline {chapter}{ABSTRAK}{ii}{section*.7}
+\contentsline {chapter}{ABSTRACT}{iv}{section*.8}
+\contentsline {chapter}{Daftar Isi}{v}{section*.8}
+\contentsline {chapter}{Daftar Gambar}{vii}{section*.8}
+\contentsline {chapter}{Daftar Tabel}{viii}{section*.8}
+\contentsline {chapter}{\numberline {1}\uppercase {Pendahuluan}}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Permasalahan}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Rumusan Masalahan}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Batasan Permasalahan}{2}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Tujuan}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Metodologi Penelitian}{3}{section.1.4}
+\contentsline {section}{\numberline {1.5}Sistematika Penulisan}{3}{section.1.5}
+\contentsline {chapter}{\numberline {2}\uppercase {Tinjauan Pustaka}}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Very Large Scale Integration}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Arus Pengembangan LSI}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Kemungkinan Serangan Desain LSI}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Mengatasi Serangan terhadap Desain LSI}{8}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Teknik Proteksi}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Digital Signal Processing Filter}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Polimorphisme Gate}{9}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Peralatan dan Teknologi}{10}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Verilog HDL}{10}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Yosys Open SYnthesis Suite}{10}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Xilinx ISE Design Suit}{11}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}FPGA Elbert V2 Board}{11}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Target IP Core}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Aritmatic Logic Unit (ALU)}{12}{subsection.2.4.1}
+\contentsline {chapter}{\numberline {3}\uppercase {Desain dan Simulasi}}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Perancangan Desain}{14}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Skema Perlindungan}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Spesifikasi}{18}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Alur Proses Pengembangan}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}Simulasi}{21}{section.3.3}
+\contentsline {chapter}{\numberline {4}\uppercase {Pengujian dan Analisis}}{22}{chapter.4}
+\contentsline {section}{\numberline {4.1}Pengujian}{22}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Sekenario Pengujian}{22}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Hasil Pengujian}{22}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Analisis}{26}{section.4.2}
+\contentsline {chapter}{\numberline {5}\uppercase {Kesimpulan dan Saran}}{30}{chapter.5}
+\contentsline {section}{\numberline {5.1}Kesimpulan}{30}{section.5.1}
+\contentsline {section}{\numberline {5.2}Saran}{30}{section.5.2}
+\contentsline {chapter}{Daftar Referensi}{31}{Item.14}
+\contentsline {chapter}{LAMPIRAN A}{1}{section*.43}
+\contentsline {chapter}{LAMPIRAN B}{a}{section*.44}
+\contentsline {chapter}{LAMPIRAN C}{a}{section*.45}

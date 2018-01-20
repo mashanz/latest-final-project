@@ -1,0 +1,216 @@
+% Package
+
+\usepackage{tocbibind}
+
+\usepackage{hyperref}
+  \hypersetup{
+  	a4paper, 
+  	colorlinks=false,
+  	pdfborder=0 0 0,
+  	linkcolor=blue,
+  	citecolor=black,
+  	bookmarksopen=false,
+  	bookmarksnumbered=true,
+  	pdfstartview=FitH,
+  	pdfview=FitH
+	}
+% spasing reverensi
+% ADD THE FOLLOWING COUPLE LINES INTO YOUR PREAMBLE
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+	\OLDthebibliography{#1}
+	\setlength{\parskip}{0pt}
+	\setlength{\itemsep}{0pt plus 0.3ex}
+}
+
+\usepackage{url}
+  \urlstyle{same}
+
+%  Agar tabel bisa menggunakan rowspan atau colspan. 
+\usepackage{multirow}
+
+% Digunakan untuk memasukan gambar ke laporan. 
+\usepackage{graphicx}
+
+% Digunakan untuk mengantur line spacing pada laporan. Umumnya spacing yang 
+% digunakan adalah 1.5. 
+\usepackage{setspace}
+  \onehalfspacing
+  %\doublespacing
+  %\singlespacing
+
+\usepackage[paper=a4paper,headheight=0pt,left=4cm,top=3cm,right=3cm,bottom=3cm]{geometry}
+
+% Digunakan untuk mengatur caption dalam dokumen.
+\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption}
+
+% Membantu penulisan notasi matematika terutama untuk dokumen dengan banyak 
+% rumus. 
+\usepackage{amsmath}
+\usepackage{bigstrut}
+
+% Membuat seluruh tulisan menjadi Times New Roman.
+\usepackage{pslatex}
+
+% Package untuk membuat header dan footer pada dokumen. 
+\usepackage{fancyhdr}
+
+% Package untuk memasukan berkas pdf sebagai bagian dari dokumen.
+\usepackage{pdfpages}
+
+% Membantu dalam mengatur jarak antara tepi kertas dengan posisi header. 
+\usepackage[ConnyRevised]{fncychap}
+
+% Digunakan untuk membuat tabel berwarna-warni. 
+\usepackage{colortbl}
+
+\usepackage{float}
+  \floatplacement{figure}{H}
+  \floatplacement{table}{H}
+
+% Konfigurasi
+\sloppy
+
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+   \pdffalse 
+\else
+   \pdfoutput=1
+   \pdftrue
+\fi
+
+% link page numbers in TOC 
+\makeatletter
+\def\contentsline#1#2#3#4{%
+  \ifx\\#4\\%
+    \csname l@#1\endcsname{#2}{#3}%
+  \else
+    \csname l@#1\endcsname{%
+      \hyper@linkstart{link}{#4}{#2}\hyper@linkend
+    }{%
+      % same link destination for the page:
+      \hyper@linkstart{link}{#4}{#3}\hyper@linkend
+      % link destination is the page itself:
+      % \hyperpage{#3}%
+    }%
+  \fi
+}
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                  {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                  {2.3ex \@plus.2ex}%
+                                  {\large\bfseries}}
+\makeatother
+
+\setcounter{secnumdepth}{3}
+
+\setcounter{tocdepth}{3}
+
+% Atur header dan footer dalam dokumen.
+\renewcommand{\headrulewidth}{0.0pt}
+	\fancyhf{} 
+	\fancyhead[L]{} 
+	\fancyhead[C]{} 
+	\fancyhead[R]{} 
+	\fancyfoot[R]{\thepage}
+	\renewcommand{\headrulewidth}{0.0pt} 
+	%\fancyfoot[R]{\footnotesize \bo{Universitas Telkom}} 
+	\renewcommand{\footrulewidth}{0.0pt} 
+\pagestyle{fancy}
+
+% Perintah Baru
+% Perintah untuk membuat huruf tecetak miring. (alias)
+\newcommand{\f}[1]{\textit{#1}}
+
+% Perintah untuk huruf tercetak tebal dan miring. 
+\newcommand{\bi}[1]{\textbf{\textit{#1}}}
+
+% Perintah untuk huruf tercetak tebal.
+\newcommand{\bo}[1]{\textbf{#1}}
+\newcommand{\m}[1]{\boldmath{ \( #1 \)}}
+\newcommand{\mc}[1]{\boldmath{ \[ #1 \]}}
+\newcommand{\code}[1]{{\ttfamily #1}}
+
+% Buat catatan kecil. Catatan akan ditampilkan dalam tabel. 
+\newcommand{\todo}[1]{
+    \begin{tabular}{| p{13.5cm} |}
+		\rowcolor[rgb]{.9,.6,.6}
+		\bo{@todo} \\
+		\rowcolor[gray]{1.}
+		 #1 \\
+		 \\
+		\hline
+	\end{tabular}
+    }
+
+% Buat catatan untuk menambahkan referensi. 
+\newcommand{\todoCite}{
+	\begin{tabular}{| l |}
+		\rowcolor[rgb]{.6,.9,.6}
+		\bo{@todo} \\
+		\rowcolor[gray]{1.} 
+		 Referensi \\
+		 \\
+		\hline
+	\end{tabular}
+    }
+
+% Tambahkan berkas PDF ke dalam laporan dan gunakan style laporan  
+% terhadap berkas ini. 
+\newcommand{\inpdf}[1]{
+	\includepdf[pages=-,pagecommand={\thispagestyle{fancy}}]{#1.pdf}}
+
+% Tambahkan berkas PDF ke dalam laporan. 
+\newcommand{\putpdf}[1]{\includepdf[pages=-]{#1.pdf}}
+
+% Perintah untuk membuat perintah/variabel baru. 
+\newcommand{\var}[2]{\newcommand{#1}{#2}}
+
+% Perintah untuk membuat perintah/variabel baru. Teks yang ditulis dalam 
+% perintah ini akan diformat ulang menggunakan huruf kapital. 
+\newcommand{\Var}[2]{\newcommand{#1}{\uppercase{#2}}}
+
+% Tambahkan kata-kata yang dimasukan kedalam Table of Contents. 
+\newcommand{\addChapter}[1]{\phantomsection \addcontentsline{toc}{chapter}{#1}}
+
+% Alias untuk perintah \LaTeX
+\newcommand{\latex}{\LaTeX}
+
+% Ubah Istilah Penulisan
+% Beberapa istilah yang tepat untuk digunakan dalam laporan.
+\renewcommand{\bibname}{Daftar Referensi}
+\renewcommand{\contentsname}{Daftar Isi}
+\renewcommand{\listfigurename}{Daftar Gambar}
+\renewcommand{\listtablename}{Daftar Tabel}
+\renewcommand{\chaptername}{BAB}
+\renewcommand{\figurename}{\bo{Gambar}}
+\renewcommand{\tablename}{\bo{Tabel}}
+\newcommand{\pic}{Gambar}
+\newcommand{\tab}{Tabel}
+\newcommand{\equ}{Persamaan}
+
+%indent setting
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.4,0.4,0.4}
+\definecolor{codegray2}{rgb}{0.95,0.95,0.95}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{kode1}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  xleftmargin=\parindent,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{blue!40!black},
+  commentstyle=\itshape\color{codegray},
+  identifierstyle=\bfseries\color{green!40!black},
+  stringstyle=\color{grey},
+  backgroundcolor=\color{codegray2},
+}
+
+
+\lstset{style=kode1}

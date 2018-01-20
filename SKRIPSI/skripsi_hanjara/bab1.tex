@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{\babSatu}
+Membuat desain IC membutuhkan sumber daya yang sangat banyak, serta prosedur dan ketelitian yang tinggi. oleh karena itu dalam prosesnya dibutuhkan pengamanan agar desain tidak mudah dicuri yang akan menimbulkan kerugian bagi produsen IC tersebut.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Latar Belakang}
+\textit{Integrated Circuit} (IC) merupakan modul teknologi dasar dari perangkat elektronika tertanam modern. Dengan berkembangnya teknologi IC yang mengutamakan ukuran kecil, dan performa yang tinggi serta dengan harga yang murah membuat teknologi IC semakin diminati \cite{latex.intro}.
+
+Dengan ukuran modul yang sangat kecil dan banyaknya komponen pembangun, kerja sama antara desainer dilakukan untuk membangun sebuah modul VLSI sehingga setiap desainer dapat fokus mendesain salah satu fungsi yang terdapat dalam modul tersebut. Kerja sama dilakukan untuk mempermudah pembuatan desain VLSI yang memiliki tingkat kerumitan yang tinggi. Desainer juga dapat mempercepat waktu mendesain dengan menggunakan kode sumber yang sudah ada atau bekerja sama secara \textit{paralel} membuat masing-masing modul yang nantinya akan digabung menjadi sebuah modul utama VLSI.
+
+Setelah modul selesai dibuat maka modul siap untuk di-produksi. Dalam proses produksi modul perusahaan tempat desainer bekerja tidak perlu memiliki pabrik produksi modul sendiri, perusahaan dapat bekerja sama dengan mitra percetakan yang akan memproduksi modul buatan perusahaan modul tersebut. Cara kerja sama seperti ini disebut dengan \textit{Fabless Manufacturing} \cite{vlsi.hist}. Ketika akan memproduksi IC, perusahaan harus menyerahkan \textit{blueprint} modul VLSI ke percetakan, namun \textit{blueprint} tersebut tidak terjamin kerahasiaan nya serta memungkinkan plagiarisme desain oleh oknum perusahaan atau pihak ketiga yang tertarik menggunakan desain VLSI yang telah diserahkan untuk diproduksi ulang.
+
+Dengan memberikan rangkaian \textit{watermark}/pelindung sebagai pengamanan pada \textit{blueprint} VLSI siap cetak yang menandakan kepemilikan dari desainer atau perusahaan produsen modul akan melindungi dari kecurangan pihak lain yang akan mencuri desain. Sehingga kemungkinan pencurian atau plagiarisme yang menyebabkan kerugian pada perusahaan atau desainer karena desain nya dicuri atau di-plagiat berkurang
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Permasalahan}
+Pada bagian ini akan dijelaskan mengenai definisi permasalahan yang dihadapi yang telah diselesaikan serta asumsi dan batasan yang digunakan dalam menyelesaikannya. Berikut ini dijelaskan rumusan masalah yang dihadapi dalam penelitian Intelectual Property Protection (IPP) menggunakan metode \textit{Digital Filter Obfuscation Algorithm} :
+
+
+\subsection{Rumusan Masalahan}
+Berikut ini dijelaskan rumusan masalah yang dihadapi dalam penelitian Intelectual Property Protection (IPP) menggunakan metode \textit{Digital Filter Obfuscation Algorithm} :
+
+\begin{enumerate}
+	\item Dengan metode \textit{Fabless Manufacturing}, desain modul yang siap diproduksi diserahkan kepada perusahaan percetakan mitra sehingga mitra dapat mengetahui desain modul dari desainer yang	memungkinkan desain dapat dicuri oleh oknum percetakan atau pihak	ketiga yang tertarik dengan desain tersebut.
+	
+	\item Desain modul rawan terhadap plagiarisme karena desain elektronik sangat mudah ditiru, sehingga pengamanan desain harus dilakukan agar desain tidak mudah untuk dicuri atau di-plagiat.
+	
+	\item Apabila pihak ketiga mencuri desain, desainer dapat mengklaim modul tersebut dengan bukti dari pengamanan watermark yang telah tertanam dalam IC menggunakan teknik pemanggilan watermark yang hanya diketahui oleh desainer yang mendesain IC tersebut.
+\end{enumerate}
+
+\subsection{Batasan Permasalahan}
+Dalam penelitian ini rancangan desain VLSI yang disisipkan watermark membatasi masalah serta pembahasan yang akan diteliti sebagai berikut :
+
+\begin{enumerate}
+	\item Tidak membuat modul IC VLSI spesifik, namun menggunakan desain yang sudah ada kemudian disisipkan dengan rangkaian pelindung.
+	
+	\item Menyisipkan rangkaian dengan data pelindung dan tidak membahas data detail dari pemilik cipta.
+	
+	\item Watermarking yang dilakukan untuk satu chip IC dan tidak mewatermark masing-masing modul yang ter-integrasi dalam chip IC. 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Tujuan}
+Berikut merupakan tujuan pengamanan desain modul yang siap cetak sehingga aman terhadap pencurian hak cipta :
+\begin{enumerate}
+	\item Merancang rangkaian pengamanan dalam sebuah chip design sebagai bukti kepemilikan desain (\textit{ownership}) atau \textit{watermarking}.
+	
+	\item Desain \textit{chip} yang telah diberi rangkaian watermark akan dianalisis perubahan performa dari desain sebelum dan sesudah watermarking serta kemungkinan watermark di-modifikasi oleh pihak lain atau reverse engineering untuk digunakan kembali oleh pengguna yang tidak	sah.
+	
+	\item Rangkaian pengaman akan ditanam di dalam \textit{chip}/rangkaian utama yang jika di aktifkan akan memanggilan informasi pemilik dari \textit{chip} yang caranya hanya diketahui oleh pemilik cipta.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Metodologi Penelitian}
+Metode penelitian yang digunakan adalah perancangan dan \textit{prototyping} dan percobaan untuk membuktikan hipotesis yang ada.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Sistematika Penulisan}
+Sistematika penulisan laporan adalah sebagai berikut:
+
+\begin{itemize}
+	
+	\item Bab 1 \babSatu \\
+	Berisi tentang uraian latar belakang, rumusan serta batasan masalah dan gambaran umum tentang penelitian sebelumnya yang sudah ada.
+	
+	\item Bab 2 \babDua \\
+	Menjelaskan penjelasan singkat tentang LSI dan proses pembuatannya serta kemungkinan serangan dan cara mengatasinya. Cara mengatasi dari penelitian sebelumnya yang sudah ada dan cara yang diajukan oleh penulis.
+	
+	\item Bab 3 \babTiga \\
+	Penjelasan detail tentang desain yang di ajukan penulis untuk mengatasi pembajakan desain serta simulasi hasil dari perancangan desain yang diajukan.
+
+	\item Bab 4 \babEmpat \\
+	Hasil pengujian terhadap desain yang diajukan penulis serta analisis terhadap desain yang diajukan.
+	
+	\item Bab 7 \kesimpulan \\
+	Kesimpulan yang didapat dari hasil pengujian desain yang diajukan dan saran untuk pengembangan riset dimasa mendatang.
+\end{itemize}

@@ -1,0 +1,33 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Produksi Chip Moderen\relax }}{6}{figure.caption.9}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Clonning/Sumber Tidak Terpercaya\relax }}{7}{figure.caption.10}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces RE (Reverse Engineering)\relax }}{7}{figure.caption.11}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Model Bisnis Lama\relax }}{8}{figure.caption.12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Model Bisnis Baru\relax }}{8}{figure.caption.13}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Polymorph gate\cite {Chen2017a}\relax }}{10}{figure.caption.14}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Perbedaan Tinkatan Abstraksi dan Sintesis Yosys\cite {link.yosys}\relax }}{11}{figure.caption.15}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Logo Xilinx ISE Design Suit\cite {link.logo}\relax }}{11}{figure.caption.16}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces FPGA Board - Elbert V2\cite {link.board}\relax }}{12}{figure.caption.17}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces ALU\relax }}{13}{figure.caption.18}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Desain ALU yang akan dilindungi\relax }}{14}{figure.caption.19}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Desain rangkaian pelindung\relax }}{14}{figure.caption.20}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Desain rangkaian Top modul yang terdapat rangkaian lain\relax }}{15}{figure.caption.21}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Desain rangkaian ALU pada top modul\relax }}{15}{figure.caption.22}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Desain rangkaian pelindung pada top modul\relax }}{16}{figure.caption.23}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Algoritma aktifasi\relax }}{17}{figure.caption.24}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Desain rangkaian top modul yang telah diberi pelindung\relax }}{17}{figure.caption.25}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Skema Perancangan Umum Proses Desain\relax }}{18}{figure.caption.26}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Skema kegiatan A\relax }}{19}{figure.caption.27}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Skema kegiatan B\relax }}{19}{figure.caption.28}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Skema kegiatan C\relax }}{20}{figure.caption.29}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Skema kegiatan D\relax }}{20}{figure.caption.30}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Simulasi Alat\relax }}{21}{figure.caption.31}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram Sinyal Input\relax }}{24}{figure.caption.33}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram Sinyal Output\relax }}{24}{figure.caption.34}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Power Supply Currents Diagram\relax }}{26}{figure.caption.37}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces On-Chip Power Summary Diagram\relax }}{27}{figure.caption.39}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Power Supply Currents Diagram\relax }}{28}{figure.caption.41}
+\addvspace {10\p@ }

@@ -1,0 +1,281 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{\babEmpat}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Pengujian}
+Setelah desain selesai di rancang, kemudian dilakukan pengujian untuk mengetahui apakah desain yang telah dirancang dapat bekerja dengan baik serta mengetahui bagaimana performasi alat yang di rancang.
+
+\subsection{Sekenario Pengujian}
+Untuk pengujian yang dilakukan adalah pengujian funsional algoritma (behavioral) serta pengujian performansi waktu operasi dan daya yang dibutuhkan alat yang telah dirancang.
+
+Pada pengujian fungsional dilakukan pengujian mengguankan simulasi diagram waktu. Pada diagram waktu dapat dilihat proses input output satu demi satu dalam satuan waktu tertentu. Pengujian satu persatu dilakukan untuk mengetahui secara detail fungsional IC yang telah dirancang. Hasil pengujian fungsional dapat dilihat pada \textbf{lampiran 3}, hasil pengujian fungsional ini merujuk pada spesifikasi desain pada \textbf{lampiran 1 dan 2}.
+
+Apabila uji fungsional tidak ditemukan anomali, maka dilanjutkan pengujian selanjutnya yaitu pengujian daya serta performansi. Hal ini untuk mengetahui apakah terjadi perubahan yang signifikan pada perangkat yang diberi perlindungan dengan yang tidak diberi perlindungan
+
+\subsection{Hasil Pengujian}
+Berikut ini adalah hasil pengujian fungsional dari perangkat yang telah dilindungi. pengujian yang pertama adalah pengujian fungsional  modul inti yaitu modul ALU.
+
+\begin{table}[H]
+	\centering
+	\caption{Data Aktivasi rangkaian pelindung, Input (A) dan Output (Z)}
+	\label{tab:rawdata}%
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\rowcolor[rgb]{ .949,  .949,  .949} \multicolumn{18}{|c|}{REG} \bigstrut\\
+		\hline
+		\rowcolor[rgb]{ .949,  .949,  .949} \multicolumn{1}{|p{2.145em}|}{CLK} & \multicolumn{8}{c|}{A}                                        &       & \multicolumn{8}{c|}{Z} \bigstrut\\
+		\hline
+		0     & 0     & 0     & 0     & 0     & 0     & 1     & 1     & 1     & \multirow{19}[38]{*}{} & 0     & 0     & 0     & 0     & 0     & 0     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    1     & 0     & 0     & 0     & 0     & 0     & 1     & 0     & 1     &       & 0     & 1     & 0     & 0     & 0     & 0     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    2     & 0     & 0     & 0     & 0     & 0     & 1     & 1     & 0     &       & 1     & 0     & 0     & 0     & 0     & 0     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    3     & 0     & 0     & 0     & 0     & 0     & 0     & 1     & 0     &       & 1     & 1     & 0     & 0     & 1     & 0     & 1     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    4     & 0     & 0     & 0     & 0     & 0     & 0     & 1     & 1     &       & 0     & 0     & 0     & 0     & 1     & 0     & 1     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    5     & 0     & 0     & 0     & 0     & 0     & 1     & 0     & 0     &       & 0     & 1     & 0     & 0     & 1     & 0     & 1     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    6     & 0     & 0     & 0     & 0     & 0     & 0     & 1     & 0     &       & 1     & 0     & 0     & 0     & 1     & 0     & 1     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    7     & 0     & 0     & 0     & 0     & 0     & 0     & 0     & 0     &       & 1     & 1     & 0     & 1     & 0     & 0     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    8     & 0     & 0     & 0     & 0     & 0     & 1     & 1     & 1     &       & 0     & 0     & 0     & 1     & 0     & 0     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    9     & 0     & 0     & 0     & 0     & 0     & 1     & 0     & 0     &       & 0     & 1     & 0     & 1     & 0     & 0     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    10    & 0     & 0     & 0     & 0     & 0     & 0     & 1     & 0     &       & 1     & 0     & 0     & 1     & 0     & 0     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    11    & 0     & 0     & 0     & 0     & 0     & 0     & 0     & 1     &       & 1     & 1     & 0     & 1     & 1     & 0     & 0     & 1 \bigstrut\\
+		\cline{1-9}\cline{11-18}    12    & 0     & 0     & 0     & 0     & 0     & 1     & 0     & 1     &       & 0     & 0     & 0     & 1     & 1     & 0     & 0     & 1 \bigstrut\\
+		\cline{1-9}\cline{11-18}    13    & 0     & 0     & 0     & 0     & 0     & 0     & 1     & 1     &       & 0     & 1     & 0     & 1     & 1     & 0     & 0     & 1 \bigstrut\\
+		\cline{1-9}\cline{11-18}    14    & 0     & 0     & 0     & 0     & 0     & 0     & 1     & 1     &       & 1     & 0     & 0     & 1     & 1     & 0     & 0     & 1 \bigstrut\\
+		\cline{1-9}\cline{11-18}    15    & 0     & 0     & 0     & 0     & 0     & 1     & 0     & 0     &       & 1     & 1     & 1     & 0     & 0     & 1     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    16    & 0     & 0     & 0     & 0     & 0     & 0     & 1     & 0     &       & 0     & 0     & 1     & 0     & 0     & 1     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    17    & 0     & 0     & 0     & 0     & 0     & 1     & 1     & 1     &       & 0     & 1     & 1     & 0     & 0     & 1     & 0     & 0 \bigstrut\\
+		\cline{1-9}\cline{11-18}    18    & 0     & 0     & 0     & 0     & 0     & 0     & 1     & 1     &       & 1     & 0     & 1     & 0     & 0     & 1     & 0     & 0 \bigstrut\\
+		\hline
+	\end{tabular}%
+\end{table}%
+
+Data mentah (raw) di atas didapat dari hasil timing diagram (lampiran). Untuk mengetahui hasil kebenaran dilakukan truth prove pada data raw. Signal dapat dilihat pada \textbf{lampiran B2}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]
+	{pics/din.png}
+	\caption{Diagram Sinyal Input}
+	\label{Diagram Data Input}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]
+	{pics/dout.png}
+	\caption{Diagram Sinyal Output}
+	\label{Diagram Data Output}
+\end{figure}
+
+Apabila digambarkan sinyal data input dan output untuk aktifasi perlindungan akan nampak seperti gambar diatas. Sinyal input seakan seperti sinyal tak beraturan namun memiliki pola tertentu. Jika kita analogikan seperti kunci dan gembok, sinyal input merupakan seakan seperti gerigi pada kunci yang akan mengurutkan susunan pada gembok agar terbuka.
+
+Untuk mengecek apakah kunci merupakan kunci yang benar, maka dilakukan perhitungan autentikasi yang hasilnya seperti tabel dibawah ini.
+
+\begin{table}[H]
+	\centering
+	\caption{Analisis Data Mentah}
+	\label{tab:translasi}%
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		\rowcolor[rgb]{ .949,  .949,  .949} \multicolumn{2}{|c|}{IO} & \multicolumn{8}{c|}{bit}                                      & \multicolumn{3}{c|}{STEP} \bigstrut\\
+		\hline
+		\rowcolor[rgb]{ .949,  .949,  .949} in    & out   & 7     & 6     & 5     & 4     & 3     & 2     & 1     & 0     & HCUT  & MCUT  & \multicolumn{1}{l|}{CHECK} \bigstrut\\
+		\hline
+		7     & 0     & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		5     & 64    & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		6     & 128   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		2     & 202   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 10    & 2     & OK \bigstrut\\
+		\hline
+		3     & 10    & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		4     & 74    & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		2     & 138   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		0     & 208   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 16    & 0     & OK \bigstrut\\
+		\hline
+		7     & 16    & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		4     & 80    & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		2     & 144   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		1     & 217   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 25    & 1     & OK \bigstrut\\
+		\hline
+		5     & 25    & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		3     & 89    & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		3     & 153   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		4     & 228   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 36    & 4     & OK \bigstrut\\
+		\hline
+		2     & 36    & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		7     & 100   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+		3     & 164   & 128   & 64    & 32    & 16    & 8     & 4     & 2     & 1     & 0     & 0     & - \bigstrut\\
+		\hline
+	\end{tabular}%
+\end{table}%
+
+Dari hasil pengujian di atas didapat bahwa fungsional dari masing masing modul yang telah digabung tidak saling bentrok satu sama lain dan dapat bekerja dengan semestinya.
+
+Dengan hasil pengujian fungsional yang tidak terdapat anomali maka dapat dilanjutkan analisis daya dari modul sebelum diberi perlindungan dengan modul yang telah diberi perlindungan.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Analisis}
+Pertama analisis performansi perangkat sebelum dilindungi, kemudian lindungi alat dengan rangkaian pelindung dan analisis performansinya dan bandingkan hasil analisis sebelum dengan hasil analisis sesudah dilindungi. berikut rekap data hasil analisis sebelum dan sesudah diberi rangkaian pelindung. Berikut merupakan soft-estimasi kecepatan clock pada FPGA arsitektur XILINX.
+
+\begin{table}[H]
+	\centering
+	\caption{FPGA Speed Analysis}
+	\label{tab:speed}%
+	\begin{tabular}{|l|c|c|}
+		\hline
+		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|c|}{Unprotected} & Minimum & Maximum \bigstrut\\
+		\hline
+		Period & 2.692ns & 371.471MHz (freq) \bigstrut\\
+		\hline
+		Input arrival time before clock & 10.075ns & - \bigstrut\\
+		\hline
+		Output required time after clock & -     & 5.558ns \bigstrut\\
+		\hline
+		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|c|}{Protected} & Minimum & Maximum \bigstrut\\
+		\hline
+		Period & 4.023ns & 248.571MHz (freq) \bigstrut\\
+		\hline
+		Input arrival time before clock & 8.667ns & - \bigstrut\\
+		\hline
+		Output required time after clock & -     & 6.962ns \bigstrut\\
+		\hline
+	\end{tabular}%
+\end{table}%
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\textwidth]
+	{pics/kecepatan.png}
+	\caption{Power Supply Currents Diagram}
+	\label{DiagramKecepatan}
+\end{figure}
+
+Dari hasil analisis terjadi penurunan kecepatan maksimum proses pada FPGA dari 371.471 Mhz menjadi 248.571 Mhz atau sekitar 33\%. Pada hasil soft-simulasi ini mengindikasikan bakal terjadi penurunan speed pada modul yang sedang dikembangkan.
+
+\begin{table}[H]
+	\centering
+	\caption{On-Chip Power Summary}
+	\label{tab:power}%
+	\begin{tabular}{|l|c|}
+		\hline
+		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|c|}{Unprotected} & Power (mW) \bigstrut\\
+		\hline
+		Clock & 1.12 \bigstrut\\
+		\hline
+		Static Power & 10.42 \bigstrut\\
+		\hline
+		Total & 11.54 \bigstrut\\
+		\hline
+		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|c|}{Protected} & Power (mW) \bigstrut\\
+		\hline
+		Clock & 1.37 \bigstrut\\
+		\hline
+		Static Power & 10.42 \bigstrut\\
+		\hline
+		Total & 11.79 \bigstrut\\
+		\hline
+	\end{tabular}%
+\end{table}%
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\textwidth]
+	{pics/daya.png}
+	\caption{On-Chip Power Summary Diagram}
+	\label{DiagramDaya}
+\end{figure}
+
+Dari data tersebut, kebutuhan daya total rangkaian utama sesudah proteksi meningkat sebesar 2\%, dari 11.54mW menjadi 11.79mW.
+
+\begin{table}[H]
+	\centering
+	\caption{Power Supply Currents}
+	\label{tab:addlabel}%
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{5}{|c|}{Unprotected} \bigstrut\\
+		\hline
+		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|p{4.93em}|}{Supply Source} & \multicolumn{1}{p{4.93em}|}{Supply Voltage} & \multicolumn{1}{p{4.93em}|}{Total Current (mA)} & \multicolumn{1}{p{4.93em}|}{Dynamic Current (mA)} & \multicolumn{1}{p{4.93em}|}{Quiescent Current (mA)} \bigstrut\\
+		\hline
+		Vccint & 1.20  & 2.95  & 0.94  & 2.01 \bigstrut\\
+		\hline
+		Vccaux & 2.50  & 3.00  & 0.00  & 3.00 \bigstrut\\
+		\hline
+		Vcco25 & 2.50  & 0.20  & 0.00  & 0.20 \bigstrut\\
+		\hline
+		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{5}{|c|}{Protected} \bigstrut\\
+		\hline
+		\rowcolor[rgb]{ .906,  .902,  .902} \multicolumn{1}{|p{4.93em}|}{Supply Source} & \multicolumn{1}{p{4.93em}|}{Supply Voltage} & \multicolumn{1}{p{4.93em}|}{Total Current (mA)} & \multicolumn{1}{p{4.93em}|}{Dynamic Current (mA)} & \multicolumn{1}{p{4.93em}|}{Quiescent Current (mA)} \bigstrut\\
+		\hline
+		Vccint & 1.20  & 3.16  & 1.14  & 2.02 \bigstrut\\
+		\hline
+		Vccaux & 2.50  & 3.00  & 0.00  & 3.00 \bigstrut\\
+		\hline
+		Vcco25 & 2.50  & 2.00  & 0.00  & 0.20 \bigstrut\\
+		\hline
+	\end{tabular}%
+\end{table}%
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.0\textwidth]
+	{pics/powerConsumption.png}
+	\caption{Power Supply Currents Diagram}
+	\label{Power Consumption}
+\end{figure}
+
+
+Dari hasil diatas terlihat kebutuhan arus pada FPGA meningkat dari 2.95 menjadi 3.16 atau sekitar 6.64\% pada suplay Vccint di 1.2 Volt.
+
+
+% Table generated by Excel2LaTeX from sheet 'Sheet2'
+\begin{table}[htbp]
+  \centering
+  \caption{Peningkatan overhead yang digunakan setelah kompilasi}
+    \begin{tabular}{lllllllll}
+    \hline
+    \multicolumn{3}{|c|}{} & \multicolumn{2}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}unprotected} & \multicolumn{2}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}protected} & \multicolumn{2}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}protector} \bigstrut\\
+    \hline
+    \multicolumn{1}{c|}{\multirow{7}[14]{*}{used}} & \multicolumn{1}{c|}{Gate} & \multicolumn{1}{c|}{size} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}gates} & \multicolumn{1}{c|}{tspg} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}gates} & \multicolumn{1}{c|}{tspg} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}gates} & \multicolumn{1}{c|}{tspg} \bigstrut\\
+\cline{2-9}    \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{not} & \multicolumn{1}{c|}{6} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}365} & \multicolumn{1}{c|}{2190} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}376} & \multicolumn{1}{c|}{2256} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}7} & \multicolumn{1}{c|}{42} \bigstrut\\
+\cline{2-9}    \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{nand21} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}615} & \multicolumn{1}{c|}{2460} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}634} & \multicolumn{1}{c|}{2536} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}2} & \multicolumn{1}{c|}{8} \bigstrut\\
+\cline{2-9}    \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{nor21} & \multicolumn{1}{c|}{4} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}1117} & \multicolumn{1}{c|}{4468} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}1116} & \multicolumn{1}{c|}{4464} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}12} & \multicolumn{1}{c|}{48} \bigstrut\\
+\cline{2-9}    \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{xor21} & \multicolumn{1}{c|}{8} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}438} & \multicolumn{1}{c|}{3504} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}419} & \multicolumn{1}{c|}{3352} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}1} & \multicolumn{1}{c|}{8} \bigstrut\\
+\cline{2-9}    \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{dff} & \multicolumn{1}{c|}{18} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}16} & \multicolumn{1}{c|}{288} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}16} & \multicolumn{1}{c|}{288} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}16} & \multicolumn{1}{c|}{288} \bigstrut\\
+\cline{2-9}    \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{mux21} & \multicolumn{1}{c|}{6} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}126} & \multicolumn{1}{c|}{756} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}129} & \multicolumn{1}{c|}{774} & \multicolumn{1}{c|}{\cellcolor[rgb]{ .851,  .851,  .851}5} & \multicolumn{1}{c|}{30} \bigstrut\\
+    \hline
+    \multicolumn{3}{|c|}{total} & \multicolumn{1}{c|}{2677} & \multicolumn{1}{c|}{13666} & \multicolumn{1}{c|}{2690} & \multicolumn{1}{c|}{13670} & \multicolumn{1}{c|}{43} & \multicolumn{1}{c|}{424} \bigstrut\\
+    \hline
+    \multicolumn{3}{|c|}{differential area size} & \multicolumn{4}{c|}{0.03\%}   & \multicolumn{2}{c|}{\multirow{2}[4]{*}{}} \bigstrut\\
+\cline{1-7}    \multicolumn{3}{|c|}{differential gate used} & \multicolumn{4}{c|}{0.49\%}   & \multicolumn{2}{c|}{} \bigstrut\\
+    \hline
+    \multicolumn{9}{c}{} \bigstrut[t]\\
+    \multicolumn{9}{l}{* public standard cell size (square microns)} \\
+    \multicolumn{9}{l}{** tspg (total size per gate)} \\
+    \end{tabular}%
+  \label{tabaddlabel}%
+\end{table}%
+
+
+Kompilasi menggunakan library standard dari mosis didapatkan banyaknya gate yang digunakan sebelum rangkaian dilindungi adalah 2677 dan meningkat menjadi 2690 setelah rangkaian diberi pelindung. Peningkatan jumlah gate yang digunakan meningkat sekitar 0.03\%. Serta dari Luas 13666 micron persegi menja 13679 micron persegi, dengan kata lain terjadi penambahan overhead sekitar 0.49\%. Artinya peningkatan luas layoutnya tidak terlalu signifikan bila di sisipkan rangkaian pelindung.
